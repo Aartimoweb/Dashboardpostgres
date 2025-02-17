@@ -362,7 +362,7 @@ const AdminPage: React.FC = () => {
                             validationSchema={validationSchema}
                             onSubmit={handleFormSubmit}
                         >
-                            {({ setFieldValue, isSubmitting, values }) => (
+                            {({ setFieldValue, isSubmitting }) => (
                                 <Form>
                                     <div className="form-group">
                                         <label>First Name:</label>

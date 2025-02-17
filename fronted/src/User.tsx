@@ -1,5 +1,6 @@
 import React from "react";
 import { useUser } from "./UserContext";
+import Profile from "./Image";
 
 const UserDetails: React.FC = () => {
   const { user } = useUser();
@@ -16,14 +17,14 @@ const UserDetails: React.FC = () => {
       <p><strong>Contact:</strong> {user.contact}</p>
       <p><strong>Gender:</strong> {user.gender}</p>
       {user.profile ? (
-        <div>
-          <p><strong>Profile Image:</strong></p>
-          <img 
-            src={user.profile} 
-            alt="User Profile" 
-            style={{ width: '150px', height: '150px', borderRadius: '50%' }} 
-          />
-        </div>
+         <div>
+         <p><strong>Profile Image:</strong></p>
+         <Profile 
+           first_name={user.first_name} 
+           last_name={user.last_name} 
+           imageUrl={user.profile} 
+         />
+       </div>
       ) : (
         <p>No profile image available.</p>
       )}
